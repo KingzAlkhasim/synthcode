@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+* { scrollbar-width: thin; scrollbar-color: rgb(51 65 85) transparent; }
+*::-webkit-scrollbar { width: 6px; height: 6px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: rgb(51 65 85); border-radius: 3px; }
+*::-webkit-scrollbar-thumb:hover { background: rgb(71 85 105); }
+
+/* Syntax highlighting tokens */
+.token.keyword { color: #c586c0; }
+.token.string { color: #ce9178; }
+.token.function { color: #dcdcaa; }
+.token.number { color: #b5cea8; }
+.token.comment { color: #6a9955; font-style: italic; }
+.token.tag { color: #569cd6; }
+.token.selector { color: #d7ba7d; }
+.token.attr-name { color: #9cdcfe; }
+.token.attr-value { color: #ce9178; }
+.token.property { color: #9cdcfe; }
+.token.value { color: #ce9178; }
+
+::selection { background: rgba(0, 212, 170, 0.3); }
+*:focus { outline: none; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: translateX(0); } }
+
+.animate-fade-in { animation: fadeIn 0.2s ease; }
+.animate-slide-in { animation: slideIn 0.2s ease; }
+
+.font-mono { font-feature-settings: "liga" 1, "calt" 1; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+pre, code { font-family: 'JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', monospace; }
